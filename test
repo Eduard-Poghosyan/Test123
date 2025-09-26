@@ -1,6 +1,22 @@
 #include <iostream>
+#include <string>
+
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    string name;
+
+    cout << "What's your name? ";
+    getline(cin, name);  // Считывает всю строку, включая пробелы
+
+    // Устанавливаем зелёный цвет (ANSI escape code)
+    cout << "\033[1;32m";
+
+    // Персональное приветствие
+    cout << "Hello, " << name << "! Welcome to the world of C++." << endl;
+
+    // Сброс цвета обратно к обычному
+    cout << "\033[0m";
+
     return 0;
 }
